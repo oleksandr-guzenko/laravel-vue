@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use bfinlay\SpreadsheetSeeder\SpreadsheetSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,5 +13,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+
+        $this->call([
+            //SpreadsheetSeeder::class,
+            BackEndTableSeeder::class,
+            //PropertiesTableSeeder::class,
+            //AnalyticTypesTableSeeder::class,
+            //PropertyTypesTableSeeder::class,
+        ]);
     }
 }
