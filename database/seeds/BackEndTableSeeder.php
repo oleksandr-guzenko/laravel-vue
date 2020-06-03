@@ -28,6 +28,7 @@ class BackEndTableSeeder extends SpreadsheetSeeder
 
         parent::run();
 
+        // update the Properties Table GUID column
         $this->updatePropertiesTableGUIDColumn();
     }
 
