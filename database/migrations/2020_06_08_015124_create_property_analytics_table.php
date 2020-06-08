@@ -15,8 +15,10 @@ class CreatePropertyAnalyticsTable extends Migration
     {
         Schema::create('property_analytics', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('property_id');
-            $table->unsignedInteger('analytic_type_id');
+            $table->unsignedBigInteger('property_id');
+            $table->foreign('property_id')->references('id')->on('properties');
+            $table->unsignedBigInteger('analytic_type_id');
+            $table->foreign('analytic_type_id')->references('id')->on('analytic_types');
             $table->text('value');
             $table->timestamps();
         });
