@@ -11,4 +11,8 @@ class Properties extends Model
         'state',
         'country'
     ];
+
+    public function propertyAnalytics() {
+        return $this->belongsTo('App\PropertyAnalytics');
+    }
 }

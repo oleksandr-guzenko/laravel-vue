@@ -15,4 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route Resource
 Route::resource('properties', 'PropertiesController');
+Route::resource('property-analytics', 'PropertyAnalyticsController');
+Route::resource('analytic-types', 'AnalyticTypesController');
+
+// Route API Resource
+Route::apiResource('properties-api', 'API\PropertiesController');
+Route::apiResource('property-analytics-api', 'API\PropertyAnalyticsController');
+Route::apiResource('analytic-types-api', 'API\AnalyticTypesController');
+
+
